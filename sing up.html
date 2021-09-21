@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet " href="assets/css/bootstrap.css">
+
+    <link rel="icon" type="image/x-icon" href="assets/img/Untitled.png" />
+    <meta content="" name="description">
+    <meta content="fair vote" name="keywords">
+    <title>sign up-SVOTE</title>
+</head>
+
+<body id="body" style="background: #f8f9fa;">
+    <!--first navbar-->
+    <nav class="navbar navbar-expand-sm navbar-light " id="nav" style="background:  #fff8f8;  ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"> <img src="assets/img/Untitled.png" width="100 "></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav    me-auto mb-2 mb-lg-0  r d-flex justify-content-around ">
+                    <li class="nav-item active">
+                        <a class="nav-link font-weight-bold  " aria-current="page" style=" font-family: geneva;"
+                            href="index.html">
+                            <h5>Sing in</h5>
+                        </a>
+                    </li>
+                    <li class="nav-item text-dange">
+                        <a class="nav-link font-weight-bold active " href="sing up.html" style="font-family: geneva;">
+                            <h5>sing up</h5>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  font-weight-bold " href="# " style="font-family: geneva; ">
+                            <h5>connect us</h5>
+                        </a>
+                    </li>
+                </ul>
+                <span class="slide"></span>
+                <div class="form-check form-switch">
+
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" value="1"
+                            onchange="DarkMode()" checked id="myonoffswitch" tabindex="0">
+                        <label class="onoffswitch-label" for="myonoffswitch">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <!--end first navbar-->
+    <!--input groupe-->
+
+
+    <div class="row " id="form" style="background: #f8f9fa;">
+
+        <!--sing up-->
+        <div class="col-md-6 " style="background: #f8f9fa;" id="form2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-xl-7 mx-auto">
+                        <h6 class="display-4" id="h3"
+                            style="font-family:initial;  color: #000000;  margin: 0 0 15px; text-align: center; top: 50%; z-index: 2;">
+                            Register </h6>
+                        <p id="h6" style="color: rgb(4, 0, 19); margin-bottom: 20px; text-align: center;"> Create your
+                            account.
+                            It's takes a minute.</p>
+                        <!-- form -->
+                        <form oninput='up2.setCustomValidity(up2.value !=up.value ?"password do not match." :"")'>
+                            <div class="row">
+                                <!-- name & last name -->
+                                <div class="col">
+                                    <div class="form-group mb-3">
+                                        <input type="text" class="form-control shadow-sm px-4 "
+                                            style="border-radius: 10px;" name="first_name" placeholder="First Name"
+                                            required="required">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group mb-3">
+                                        <input type="text" class="form-control shadow-sm px-4" name="last_name"
+                                            style="border-radius: 10px; " placeholder="Last Name" required="required">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end name & last name -->
+                            <!-- email -->
+                            <div class="form-group mb-3">
+                                <input id="inputEmail" style="border-radius: 10px;" type="email"
+                                    placeholder="Email address" required="" autofocus=""
+                                    class="form-control  shadow-sm px-4">
+                            </div>
+                            <!-- end email  -->
+                            <!-- st card number  -->
+                            <div class="form-group mb-3">
+                                <input id="inputEmail" style="border-radius: 10px;" type="text"
+                                    placeholder="student card number" required="" autofocus=""
+                                    class="form-control  shadow-sm px-4">
+                            </div>
+                            <!--  end st card number  -->
+                            <!-- levle select -->
+                            <div class="input-group mb-3">
+
+                                <select class="form-select shadow-sm px-4" style="border-radius: 10px; "
+                                    onchange="return val(this.value);" id="inputGroupSelect01">
+                                    <option selected value="0">preparatory stage</option>
+                                    <option value="1">Engineering stage</option>
+                                </select>
+                            </div>
+                            <div class="input-group mb-3">
+
+                                <select class="form-select shadow-sm px-4" name="" style="border-radius: 10px;"
+                                    id="inputGroupSelect02">
+                                    <option selected>which year?</option>
+                                    <option style="display:block;" id="op1">1st year</option>
+                                    <option value="2" style="display:block;" id="op2">2ed year</option>
+                                    <option value="3" style="display:none;" id="op3">3ed year</option>
+                                    <option value="4" style="display:none;" id="op4">4th year</option>
+                                    <option value="5" style="display:none;" id="op5">5th year</option>
+                                </select>
+                            </div>
+                            <!-- end levle select -->
+                            <!-- password & confirm -->
+                            <div class="form-group mb-3">
+                            
+                                <input id="myInput" v-model="password" type="password" style="border-radius: 10px;" name="up"
+                                    placeholder="Password"   class="form-control  shadow-sm px-4 text-primary">
+                             
+                                </div>
+                            <div class="form-group mb-3">
+                                <input id="elzero-app" type="password"   style="border-radius: 10px;" name="up2"
+                                    placeholder="confirm Password" class="form-control  shadow-sm px-4 text-primary">
+                            </div>
+
+                            <!-- end password & confirm -->
+                            <!-- submit -->
+                            <div class="row">
+                                <div class="col-4"> <button id="btn2" type="submit" name="submit"
+                                        class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Sing
+                                        in</button></div>
+                                <div class="col-5 d-flex align-items-end">
+                                    <p id="p1" style="display: inline;  margin-top: -18px;">Already Registed?</p>
+                                </div>
+                                <div class="col-3 d-flex align-items-center">
+                                    <h6 style="display: inline; "> <a id="sing in" href="index.html"
+                                            style="text-decoration: none;">
+                                            Sign in</a></h6>
+                                </div>
+                            </div>
+
+
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- submit -->
+
+        </div><!-- End sign in -->
+        <!--image-->
+        <div class="col-md-6 ali bg-image">
+            <div class="container">
+                <div class=" flex-shrink-2 p-3 m-3 "> <img class="img-fluid" style="  width:420px; margin-top:  55px; margin-left: -50px;"
+                        src="assets/img/PngItem_6003465.png">
+                </div>
+            </div>
+        </div>
+
+        <!--end img-->
+
+    </div>
+    <!--end input groupe-->
+    <script>
+
+        // js for derk mode 
+        function DarkMode() {
+            var l = document.getElementById("myonoffswitch");
+            var n = document.getElementById("nav");
+            var b = document.getElementById("body");
+            var f = document.getElementById("form");
+            var f2 = document.getElementById("form2");
+            var btn = document.getElementById("btn2");
+            var h6 = document.getElementById("h6");
+            var h3 = document.getElementById("h3");
+            var su = document.getElementById("sing in");
+            var p1 = document.getElementById("p1");
+            if (l.value === "1") {
+                l.value = "0";
+                n.classList = "navbar navbar-expand-sm navbar-dark";
+                n.style = "background:  #000105";
+                b.style = "background: #050801";
+                f.style = "background: #050801";
+                f2.style = "background: #050801";
+                btn.style = "background: #d20100";
+                h6.style.color = " azure";
+                h3.style.color = " #ff8900";
+                su.style.color = " #ff8900";
+                p1.style = "color: azure";
+            }
+            else {
+                l.value = "1";
+                l.style = "color: black";
+                n.classList = "navbar navbar-expand-sm navbar-light";
+                n.style = "background:  #fff8f8";
+                b.style = "background: #f8f9fa";
+                f.style = "background: #f8f9fa";
+                f2.style = "background: #f8f9fa";
+                btn.style = "background: #0d6efd";
+                h6.style.color = " black";
+                h3.style.color = " #000000";
+                p1.style = "color: black";
+                su.style.color = " #000000";
+            }
+
+        }
+
+
+        //  end js for dark mode 
+
+        //js for select menu 
+        function val(x) {
+            var a = document.getElementById("op1");
+            var y = document.getElementById("op2");
+            var z = document.getElementById("op3");
+            var v = document.getElementById("op4");
+            var w = document.getElementById("op5");
+            if (x == 0) {
+                a.style = "display:block;"
+                y.style = "display:block;"
+                v.style = "display:none;"
+                z.style = "display:none;"
+                w.style = "display:none;"
+            } else {
+                a.style = "display:none;"
+                y.style = "display:none;"
+                z.style = "display:block;"
+                v.style = "display:block;"
+                w.style = "display:block;"
+            }
+
+        }
+    //end js for select menu
+    
+    </script>
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/vue.js"></script>
+    <!-- <script>
+     
+ function valdiatepassword() {
+    if(this.password.length < 8)
+    {
+       
+        return "<div class='alert alert-danger ' style='border-top-left-radius:  20px; border-bottom-right-radius:  20px;'> passorwd is too short </div>";
+    }
+}
+
+    </script> -->
+    
+
+</body>
+
+</html>

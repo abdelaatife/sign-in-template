@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/Untitled.png" />
+    <meta content="" name="description">
+    <meta content="fair vote" name="keywords">
+    <title> Sing in-VOTE</title>
+</head>
+
+<body id="body" style="background: #f8f9fa;">
+    <!--first navbar-->
+    <nav class="navbar navbar-expand-sm navbar-light  " id="nav" style="background:  #fff8f8; ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"> <img src="assets/img/Untitled.png" width="100 "></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav    me-auto mb-2 mb-lg-0  r d-flex justify-content-around ">
+                    <li class="nav-item active">
+                        <a class="nav-link font-weight-bold active " aria-current="page" style=" font-family: geneva;"
+                            href="index.html">
+                            <h5>Sing in</h5>
+                        </a>
+                    </li>
+                    <li class="nav-item text-dange">
+                        <a class="nav-link font-weight-bold" href="sing up.html" style="font-family: geneva;">
+                            <h5>sing up</h5>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  font-weight-bold" href="# " style="font-family: geneva; ">
+                            <h5>connect us</h5>
+                        </a>
+                    </li>
+                </ul>
+                <span class="slide2"></span>
+                <div class="form-check form-switch">
+
+                    <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" onchange="DarkMode()"
+                            value="1" checked id="myonoffswitch" tabindex="0">
+                        <label class="onoffswitch-label" for="myonoffswitch">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <!--end first navbar-->
+
+    <br>
+    <!--input groupe-->
+
+    <div class="container">
+        <div class="row ">
+            <!--image-->
+            
+            <div class="col-md-6  ">
+               
+                    
+                            <div class=" flex-shrink-2  m-3 "> <img class="img-fluid"
+                                    style="width:400px; margin-left: -70px; margin-top: 30px;"
+                                    src="assets/img/PngItem_1247054.png">
+                            </div>
+                    
+
+                
+            </div>
+            <!--end img-->
+            <!--sign in-->
+            <div id="form" style="background: #f8f9fa;" class="col-md-6 ">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-xl-7 mx-auto">
+                            <h3 class="display-4" id="h3" style="font-family:initial;">Sing in </h3>
+                            <p class="text-muted mb-4" id="p1">it's all about make fair vote</p>
+                            <form method="post">
+                                <div class="form-group mb-3">
+                                    <input id="inputEmail" type="email" placeholder="Email address" required=""
+                                        name="email" class="form-control rounded-pill shadow-sm px-4">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input id="myInput" name="password" type="password" placeholder="Password"
+                                        class="form-control rounded-pill  shadow-sm px-4 text-primary">
+                                    <div style="margin-top: 15px;">
+                                        <label><a id="labl4" style="text-decoration: none; margin-left: 110px; "
+                                                href="#myModal">forgot your password?</a></label>
+                                    </div>
+
+                                    <div style="margin-top: 20px;" class="">
+                                        <input type="checkbox" class="  form-check-input " onclick="myFunction()">
+                                        <label for="customCheck1" id="labl2" class="custom-control-label "> Show
+                                            Password</label>
+                                    </div>
+                                </div>
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <input id="customCheck1" type="checkbox" checked class="form-check-input ">
+                                    <label for="customCheck1" id="labl3" class="custom-control-label ">Remember
+                                        password</label>
+                                </div>
+                                <div class="row d-flex align-items-center">
+                                    <div class="col-5"><button id="btn2" type="submit" name="submit"
+                                            class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Sing
+                                            in</button></div>
+                                    <div class="col-2">
+                                        <h6 id="h6">or</h6>
+                                    </div>
+                                    <div class="col-5 ">
+                                        <h6> <a href="sing up.html" id="sing up" style="text-decoration: none;"> Sing
+                                                up</a></h6>
+                                    </div>
+                                </div>
+
+
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div><!-- End sign in -->
+
+        </div>
+    </div>
+
+    <!-- end input group -->
+    <!-- {/* < js for dark mode  */} -->
+    <script>
+        function DarkMode() {
+            var l = document.getElementById("myonoffswitch");
+            var n = document.getElementById("nav");
+            var b = document.getElementById("body");
+            var f = document.getElementById("form");
+            var h3 = document.getElementById("h3");
+            var h6 = document.getElementById("h6");
+            var h3 = document.getElementById("h3");
+            var l2 = document.getElementById("labl2");
+            var l3 = document.getElementById("labl3");
+            var l4 = document.getElementById("labl4");
+            var btn = document.getElementById("btn2");
+            var su = document.getElementById("sing up");
+
+            if (l.value === "1") {
+                l.value = "0";
+                l.style = "color: azure";
+                n.classList = "navbar navbar-expand-sm navbar-dark";
+                n.style = "background:  #000105";
+                b.style = "background: #050801";
+                f.style = "background: #050801";
+                h3.style.color = " #ff8900";
+                h6.style.color = " azure";
+                l2.style = "color: azure";
+                l3.style = "color: azure";
+                l4.style.color = " #d20100";
+                btn.style = "background: #d20100";
+                su.style.color = " #ff8900";
+            }
+            else {
+                l.value = "1";
+                l.style = "color: black";
+                n.classList = "navbar navbar-expand-sm navbar-light";
+                n.style = "background:  #fff8f8";
+                b.style = "background: #f8f9fa";
+                f.style = "background: #f8f9fa";
+                h3.style.color = " #000000";
+                h6.style.color = " black";
+                l2.style = "color: black";
+                l3.style = "color: black";
+                l4.style.color = "#0d6efd ";
+                btn.style = "background: #0d6efd";
+                su.style.color = "#0d6efd ";
+            }
+
+        }
+
+    </script>
+    <!-- //  end js for dark mode 
+// js for show password -->
+<script> function myFunction() {
+    var x = document.getElementById("myInput");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}</script>
+
+
+
+<!-- //  end js for show password -->
+
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+
+
+</body>
+
+</html>
